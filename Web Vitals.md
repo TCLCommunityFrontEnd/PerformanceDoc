@@ -6,7 +6,7 @@ Web 指标是 Google 开创的一项新计划，旨在为网络质量信号提�
 
 Core Web Vitals 是应用于所有 Web 页面的 Web Vitals 的子集，是其最重要的核心
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals1.jpg" width="50%">
+<img src="./Pics/WebVitals1.jpg" width="50%">
 
 #### LCP:  Largest Contentful Paint 最大内容绘制
 
@@ -22,17 +22,17 @@ LCP考虑的元素
 
 LCP元素的大小是指**视口上可见元素的大小**，**元素大小或者位置的变化不会产生新的LC候选元素**
 
-![](/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals2.webp)
+![](./Pics/WebVitals2.webp)
 
-![](/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals3.webp)
+![](./Pics/WebVitals3.webp)
 
 在上方的两个时间轴中，最大元素随内容加载而变化。在第一个示例中，新内容被添加进 DOM，并因此使最大元素发生了改变。在第二个示例中，由于布局的改变，先前的最大内容从可视区域中被移除。
 
 虽然延迟加载的内容通常比页面上已有的内容更大，但实际情况并非一定如此。接下来的两个示例显示了在页面完全加载之前出现的最大内容绘制。
 
-![](/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals4.webp)
+![](./Pics/WebVitals4.webp)
 
-![](/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals5.webp)
+![](./Pics/WebVitals5.webp)
 
 在第一个示例中，Instagram LOGO加载得相对较早，即使其他内容随后陆续显示，但LOGO始终是最大元素。在 Google 搜索结果页面示例中，最大元素是一段文本，这段文本在所有图像或标志完成加载之前就显示了出来。由于所有单个图像都小于这段文字，因此这段文字在整个加载过程中始终是最大元素。
 
@@ -40,7 +40,7 @@ LCP元素的大小是指**视口上可见元素的大小**，**元素大小或�
 
 为了提供良好的用户体验，网站应该努力将最大内容绘制控制在**2.5 秒**或以内。为了确保您能够在大部分用户的访问期间达成建议目标值，一个良好的测量阈值为页面加载的**第 75 个百分位数**，且该阈值同时适用于移动和桌面设备。
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/LCP.png" width="25%">
+<img src="./Pics/LCP.png" width="25%">
 
 ##### LCP测量
 
@@ -73,7 +73,7 @@ getLCP(console.log);
 
 第一次输入延迟通常发生在第一次内容绘制(FCP)和可持续交互时间(TTI)之间
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals6.png" width="70%">
+<img src="./Pics/WebVitals6.png" width="70%">
 
 因为输入发生在浏览器正在运行任务的过程中，所以浏览器必须等到任务完成后才能对输入作出响应。浏览器必须等待的这段时间就是这位用户在该页面上体验到的 FID 值。
 
@@ -81,7 +81,7 @@ getLCP(console.log);
 
 为了提供良好的用户体验，页面的 FID 应为**100 毫秒**或更短。
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/FID.png" width="25%">
+<img src="./Pics/FID.png" width="25%">
 
 ##### FID测量
 
@@ -119,13 +119,13 @@ CLS 测量整个页面生命周期内发生的所有[意外](https://web.dev/cls
 
 **影响分数**：测量*不稳定元素*对两帧之间的可视区域产生的影响。
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals7.png" width="60%">
+<img src="./Pics/WebVitals7.png" width="60%">
 
 在上图中，有一个元素在一帧中占据了一半的可视区域。接着，在下一帧中，元素下移了可视区域高度的 25%。红色虚线矩形框表示两帧中元素的可见区域集合，在本示例中，该集合占总可视区域的 75%，因此其*影响分数*为`0.75` 。
 
 **距离分数**：测量不稳定元素相对于可视区域位移的距离，是任何*不稳定元素*在一帧中位移的最大距离（水平或垂直）除以可视区域的最大尺寸维度（宽度或高度，以较大者为准）。
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals8.png" width="60%">
+<img src="./Pics/WebVitals8.png" width="60%">
 
 在上方的示例中，最大的可视区域尺寸维度是高度，不稳定元素的位移距离为可视区域高度的 25%，因此*距离分数*为 0.25。
 
@@ -135,7 +135,7 @@ CLS 测量整个页面生命周期内发生的所有[意外](https://web.dev/cls
 
 为了提供良好的用户体验，页面的 CLS 应保持在 **0.1.** 或更少。
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/CLS.png" width="25%">
+<img src="./Pics/CLS.png" width="25%">
 
 ##### CLS测量
 
@@ -170,9 +170,9 @@ CLS 较差的最常见原因为：
 
 **白屏与首屏**
 
-![](/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVistals9.jpeg)
+![](./Pics/WebVistals9.jpeg)
 
-![](/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals10.jpeg)
+![](./Pics/WebVitals10.jpeg)
 
 白屏时间：firstPaintEnd - performance.timing.navigationStart
 
@@ -182,13 +182,23 @@ CLS 较差的最常见原因为：
 
 表示网页第一次**完全达到可交互状态**的时间点，也就是最后一个长任务（50ms以上）完成的时间点，并且在随后5秒内网络和主线程是空闲的。
 
-<img src="/Users/moriarty_c/Documents/PerformanceDoc/Pics/WebVitals11.png" width="60%">
+<img src="./Pics/WebVitals11.png" width="60%">
 
-0~3.8s:快速，3.9~7.3s:中等，7.3s以上:慢
+**0~3.8s:快速，3.9~7.3s:中等，7.3s以上:慢**
 
 ##### Total Block Time (TBT)
 
 总阻塞时间：度量了FCP和TTI之间的总时间
+
+![](/local/sda/PerformanceDoc/Pics/WebVitals12.png)
+
+上方的时间轴上有五个任务，其中三个是长任务，因为这些任务的持续时间超过 50 毫秒。下图显示了各个长任务的阻塞时间：
+
+![](/local/sda/PerformanceDoc/Pics/WebVitals13.png)
+
+因此，虽然在主线程上运行任务的总时间为 560 毫秒，但其中只有 345 毫秒被视为阻塞时间。
+
+总阻塞时间控制在**300 毫秒**以内算良好
 
 #### 测量Web Vitals
 
@@ -200,7 +210,6 @@ CLS 较差的最常见原因为：
 
 - https://web.dev/vitals/
 - https://juejin.cn/post/7026907443250593805
-- 
 
 
 
