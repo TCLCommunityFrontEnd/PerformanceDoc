@@ -190,11 +190,11 @@ CLS 较差的最常见原因为：
 
 总阻塞时间：度量了FCP和TTI之间的总时间
 
-![](/local/sda/PerformanceDoc/Pics/WebVitals12.png)
+![](./Pics/WebVitals12.png)
 
 上方的时间轴上有五个任务，其中三个是长任务，因为这些任务的持续时间超过 50 毫秒。下图显示了各个长任务的阻塞时间：
 
-![](/local/sda/PerformanceDoc/Pics/WebVitals13.png)
+![](./Pics/WebVitals13.png)
 
 因此，虽然在主线程上运行任务的总时间为 560 毫秒，但其中只有 345 毫秒被视为阻塞时间。
 
