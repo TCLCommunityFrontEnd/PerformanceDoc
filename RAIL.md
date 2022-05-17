@@ -1,6 +1,6 @@
 ### RAIL性能模型
 
-![](./Pics/RAIL.jpg)
+<img src="./Pics/RAIL.jpg" width="60%">
 
 - Response:输入延迟时间（从点按到绘制）小于100毫秒
 - Animation:每个帧的工作（从JS到绘制）完成时间小于16毫秒
@@ -27,7 +27,7 @@
 - 复杂的js计算尽可能放在后台，如web worker，避免对用户输入造成阻塞
 - 超过50ms的响应，一定要提供反馈，比如倒计时，进度百分比等。
 
-![](./Pics/RAIL2.jpg)
+<img src="./Pics/RAIL2.jpg" width="60%">
 
 > idle task：除了要处理输入事件，浏览器还有其它任务要做，这些任务会占用部分时间，一般情况会花费50ms的时间，输入事件的响应则排在其后。
 
@@ -41,7 +41,7 @@
 
 - 在一些高压点上，比如动画，不要去挑战cpu，尽可能地少做事，如：取offset，设置style等操作。尽可能地保证60帧的体验。
 
-![](./Pics/RAIL3.jpg)
+<img src="./Pics/RAIL3.jpg" width="70%">
 
 #### I(Idle)空闲
 

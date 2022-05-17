@@ -1,8 +1,16 @@
 ### Chrome DevTools
 
+#### Lighthouse
+
+<img src="./Pics/测试5.png">
+
+关于如何得到这个评估得分，Lighthouse首先会获取关于评估指标的原始性能数据，然后根据指标权重进行加权计算，最后以其数据库中的大量的评估结果对数正态分布的映射并计算最终得分
+
+[https://googlechrome.github.io/lighthouse/scorecalc/#FCP=1039&TTI=3074&SI=3422&TBT=31&LCP=3317&CLS=0&FMP=2061&device=desktop&version=9.5.0](https://googlechrome.github.io/lighthouse/scorecalc/#FCP=1039&TTI=3074&SI=3422&TBT=31&LCP=3317&CLS=0&FMP=2061&device=desktop&version=9.5.0)
+
 #### Performance面板
 
-![](/local/sda/PerformanceDoc/Pics/测试2.png)
+<img src="./Pics/测试2.png">
 
 1. 控制面板（Controls）：开启记录，停止记录，配置记录期间需要记录的内容。
 2. 概括（Overview）:FPS,CPU,NET
@@ -59,6 +67,14 @@
 
   　　使用 translateZ(0) 过度提升过多的元素会严重影响动画性能，要谨慎提升到层，并且仅在了解这样会有切实改进时才提升到层
 
-
-
 **查看动画案例**
+
+#### FPS面板和性能监视器
+
+##### FPS面板
+
+打开devtools后，command+shift+p打开搜索，输入fps控制fps实施面板的开关
+
+##### 性能监视器
+
+在devtools更多工具中打开，可用于实施检测各项指标的动态

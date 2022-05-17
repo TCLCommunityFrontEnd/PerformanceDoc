@@ -80,6 +80,7 @@
       } else {
         // 先把位置缓存好，而不是在修改位置后立刻获取
         var pos = parseInt(m.style.top.slice(0, m.style.top.indexOf('px')));
+        // var pos = m.offsetTop;
         m.classList.contains('down') ? pos += distance : pos -= distance;
         if (pos < 0) pos = 0;
         if (pos > maxHeight) pos = maxHeight;
