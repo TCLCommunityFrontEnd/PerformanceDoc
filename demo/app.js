@@ -1,17 +1,3 @@
-/* Copyright 2016 Google Inc.
- *
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License. */
-
 (function(window) {
   'use strict';
 
@@ -21,7 +7,7 @@
       bodySize = document.body.getBoundingClientRect(),
       ballSize = proto.getBoundingClientRect(),
       maxHeight = Math.floor(bodySize.height - ballSize.height),
-      maxWidth = 97, // 100vw - width of square (3vw)
+      maxWidth = 97,
       incrementor = 50,
       distance = 3,
       frame,
@@ -80,7 +66,6 @@
       } else {
         // 先把位置缓存好，而不是在修改位置后立刻获取
         var pos = parseInt(m.style.top.slice(0, m.style.top.indexOf('px')));
-        // var pos = m.offsetTop;
         m.classList.contains('down') ? pos += distance : pos -= distance;
         if (pos < 0) pos = 0;
         if (pos > maxHeight) pos = maxHeight;

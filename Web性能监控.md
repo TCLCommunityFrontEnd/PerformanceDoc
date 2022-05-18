@@ -120,6 +120,8 @@ const performanceCore = (res = () => {}, everyPollingTime = 100, pollingTime = 1
 
 #### 日志上报方式
 
+关于[sendBeacon](https://developer.mozilla.org/zh-CN/docs/Web/API/Navigator/sendBeacon)
+
 | 方式类型/对比参数 |            接口请求            |                      图片打点                       |                     sendBeacon                      |
 | :---------------: | :----------------------------: | :-------------------------------------------------: | :-------------------------------------------------: |
 |   资源占用大小    |   一般POST传输，开销相对较大   |                        很小                         |                        较小                         |
