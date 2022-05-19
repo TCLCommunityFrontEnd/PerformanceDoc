@@ -16,16 +16,7 @@
       <button class="stop">Stop</button>
       <button class="optimize">Optimize</button>
     </div>
-    <img class="proto mover up" src="logo-1024px.png" style="left: 0vw; top: 561px;">
-    <img class="proto mover up" src="logo-1024px.png" style="left: 9.7vw; top: 495px;">
-    <img class="proto mover up" src="logo-1024px.png" style="left: 19.4vw; top: 753px;">
-    <img class="proto mover up" src="logo-1024px.png" style="left: 29.1vw; top: 612px;">
-    <img class="proto mover up" src="logo-1024px.png" style="left: 38.8vw; top: 330px;">
-    <img class="proto mover up" src="logo-1024px.png" style="left: 48.5vw; top: 465px;">
-    <img class="proto mover up" src="logo-1024px.png" style="left: 58.2vw; top: 822px;">
-    <img class="proto mover down" src="logo-1024px.png" style="left: 67.9vw; top: 702px;">
-    <img class="proto mover up" src="logo-1024px.png" style="left: 77.6vw; top: 774px;">
-    <img class="proto mover down" src="logo-1024px.png" style="left: 87.3vw; top: 711px;">
+    <img class="proto mover up" src="logo-1024px.png" style="left: 0; top: 561px;">
     <script>
       if (!!PerformanceObserver){
         try {
@@ -45,8 +36,7 @@
             }
           })
         } catch (e) {
-          // ios 不支持这种entryTypes，会报错 https://caniuse.com/?search=PerformancePaintTiming
-          console.warn('[assets-load-monitor] PerformanceObserver error:', (e || {}).message ? e.message : e);
+          console.warn('PerformanceObserver error:', (e || {}).message ? e.message : e);
         }
       }
 
